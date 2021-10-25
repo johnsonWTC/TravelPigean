@@ -18,8 +18,6 @@ namespace TravelPigean
         {
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             dynamic data = JsonConvert.DeserializeObject(requestBody);
-            name = name ?? data?.name;
-
             string responseMessage ="hey";
 
             return new OkObjectResult(responseMessage);
