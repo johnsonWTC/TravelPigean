@@ -14,8 +14,7 @@ namespace TravelPigean
     {
         [FunctionName("SayHelloFunction")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req)
         {
             string name = req.Query["name"];
 
